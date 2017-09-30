@@ -42,11 +42,11 @@ You can visit our [project page](http://www.peihuali.org/MPN-COV) for more detai
 
  Network            |224x224<br />1-crop|224x224<br />10-crop|GoogleDrive|BaiduCloud
  ---|:---:|:---:|:---:|:---:
- MPN-COV-ResNet-50 |22.27/6.35         |21.16/5.58     |[195.9MB](https://drive.google.com/open?id=0B-bKYQs6Xic1TnZ5ZS1JRlVVZGM)|[195.9MB](https://pan.baidu.com/s/1c2fG1S8)
- MPN-COV-ResNet-101 |21.17/5.70        |19.71/5.01     |[283.8MB](https://drive.google.com/open?id=0B-bKYQs6Xic1bzVDN3EyaVZ4eGs)|[283.8MB](https://pan.baidu.com/s/1hsgonTq)
- MPN-COV-AlexNet |38.37/17.14          |34.97/14.60    |[594.5MB](https://drive.google.com/open?id=0B-bKYQs6Xic1ZDJBNllxSXFDamc)|[594.5MB](https://pan.baidu.com/s/1boUndMn)
- MPN-COV-VGG-M   |34.63/14.64          |31.81/12.52    |[609.9MB](https://drive.google.com/open?id=0B-bKYQs6Xic1SmJmQkRjV1NGUWs)|[609.9MB](https://pan.baidu.com/s/1o8QJmgM)
- MPN-COV-VGG-16  |26.55/8.94           |24.68/7.75     |[643.8MB](https://drive.google.com/open?id=0B-bKYQs6Xic1Rjl2VnlWbVNEUWM)|[643.8MB](https://pan.baidu.com/s/1c2csEsC)
+ MPN-COV-ResNet-50 |22.27/6.35         |21.16/5.58     |[186.8MB](https://drive.google.com/open?id=0B-bKYQs6Xic1TnZ5ZS1JRlVVZGM)|[186.8MB](https://pan.baidu.com/s/1c2fG1S8)
+ MPN-COV-ResNet-101 |21.17/5.70        |19.71/5.01     |[270.7MB](https://drive.google.com/open?id=0B-bKYQs6Xic1bzVDN3EyaVZ4eGs)|[270.7MB](https://pan.baidu.com/s/1hsgonTq)
+ MPN-COV-AlexNet |38.37/17.14          |34.97/14.60    |[567.0MB](https://drive.google.com/open?id=0B-bKYQs6Xic1ZDJBNllxSXFDamc)|[567.0MB](https://pan.baidu.com/s/1boUndMn)
+ MPN-COV-VGG-M   |34.63/14.64          |31.81/12.52    |[581.6MB](https://drive.google.com/open?id=0B-bKYQs6Xic1SmJmQkRjV1NGUWs)|[581.6MB](https://pan.baidu.com/s/1o8QJmgM)
+ MPN-COV-VGG-16  |26.55/8.94           |24.68/7.75     |[614.0MB](https://drive.google.com/open?id=0B-bKYQs6Xic1Rjl2VnlWbVNEUWM)|[614.0MB](https://pan.baidu.com/s/1c2csEsC)
 
   - The results and models above are obtained by training from scratch (random initialization), and the code is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/imagenet).
   - The results will improve with warm initialization, for example, MPN-COV-AlexNet achieved top-1/top-5 error rates(%) 37.35/16.60 and MPN-COV-VGG-M achieved 33.44/13.61 when using 1-crop prediction.
