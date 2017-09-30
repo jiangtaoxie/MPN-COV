@@ -11,7 +11,7 @@ MPN-COV-ResNet-50        |**87.6** |**92.9** |**90.5**
 B-CNN(VGG-M+VGG-D)[[1]](#1-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017)    |84.1 |91.3 |86.6
 Improved B-CNN(VGG-D)[[2]](#2-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) |85.8 |92.0 |88.5
 
-  - The results are obtained by finetuning the MPN-COV ConvNets pretrained on ImageNet on the target fine-grained benchmarks; neither bounding boxes nor part information are used anywhere. The code to reproduce the results is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/matconvnet-1.0-beta22/examples/fine_tune).
+  - The results are obtained by finetuning the MPN-COV ConvNets pretrained on ImageNet on the target fine-grained benchmarks; neither bounding boxes nor part information are used anywhere. The code to reproduce the results is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/fine_tune).
   - We compare our results with closely related method, i.e., Bilinear CNN (B-CNN)[[1]](#1-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017) and the improved B-CNN[[2]](#2-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) .
 
 

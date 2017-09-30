@@ -48,10 +48,10 @@ You can visit our [project page](http://www.peihuali.org/MPN-COV) for more detai
  MPN-COV-VGG-M   |34.63/14.64          |31.81/12.52    |[609.9MB](https://drive.google.com/open?id=0B-bKYQs6Xic1SmJmQkRjV1NGUWs)|[609.9MB](https://pan.baidu.com/s/1o8QJmgM)
  MPN-COV-VGG-16  |26.55/8.94           |24.68/7.75     |[643.8MB](https://drive.google.com/open?id=0B-bKYQs6Xic1Rjl2VnlWbVNEUWM)|[643.8MB](https://pan.baidu.com/s/1c2csEsC)
 
-  - The results and models above are obtained by training from scratch (random initialization), and the code is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/matconvnet-1.0-beta22/examples/imagenet).
+  - The results and models above are obtained by training from scratch (random initialization), and the code is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/imagenet).
   - The results will improve with warm initialization, for example, MPN-COV-AlexNet achieved top-1/top-5 error rates(%) 37.35/16.60 and MPN-COV-VGG-M achieved 33.44/13.61 when using 1-crop prediction.
   - The two models, i.e., MPN-COV-ResNet-50 and MPN-COV-AlexNet, we released here are trained with the same settings,  slightly better than the models we reported in the ICCV paper.
-  - The results either 1-crop or 10-crop  are evaluated using our [code](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/matconvnet-1.0-beta22/examples/evaluate), Note that the main difference from the code provided by MatConvNet is that we RESIZE an image using Matlab [imresize function](http://cn.mathworks.com/help/images/ref/imresize.html); the performance will decrease slightly if the resize function of MatConvNet is used.
+  - The results either 1-crop or 10-crop  are evaluated using our [code](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/evaluate), Note that the main difference from the code provided by MatConvNet is that we RESIZE an image using Matlab [imresize function](http://cn.mathworks.com/help/images/ref/imresize.html); the performance will decrease slightly if the resize function of MatConvNet is used.
 
 ### Fine-grained classification results(top-1 accuracy rates, %)
 
@@ -61,7 +61,7 @@ MPN-COV-ResNet-50        |**87.6** |**92.9** |**90.5**
 B-CNN(VGG-M+VGG-D)[[2]](#2-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017)    |84.1 |91.3 |86.6
 Improved B-CNN(VGG-D)[[3]](#3-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) |85.8 |92.0 |88.5
 
-  - The results are obtained by finetuning the MPN-COV ConvNets pretrained on ImageNet on the target fine-grained benchmarks; neither bounding boxes nor part information are used anywhere. The code to reproduce the results is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/matconvnet-1.0-beta22/examples/fine_tune).
+  - The results are obtained by finetuning the MPN-COV ConvNets pretrained on ImageNet on the target fine-grained benchmarks; neither bounding boxes nor part information are used anywhere. The code to reproduce the results is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/fine_tune).
   - We compare our results with closely related method, i.e., Bilinear CNN (B-CNN)[[2]](#2-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017) and the improved B-CNN[[3]](#3-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) .
 
 ## Implementation details
@@ -111,7 +111,7 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
 
 ## Installation
 
-1. We package our programs and [demos](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/matconvnet-1.0-beta22/examples/imagenet) in MatConvNet toolkit,you can download these [PACKAGE](https://github.com/jiangtaoxie/MPN-COV-ConvNet.git) directly, or in your Terminal type:
+1. We package our programs and [demos](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/imagenet) in MatConvNet toolkit,you can download these [PACKAGE](https://github.com/jiangtaoxie/MPN-COV-ConvNet.git) directly, or in your Terminal type:
 
 ```
    >> git clone https://github.com/jiangtaoxie/MPN-COV-ConvNet
