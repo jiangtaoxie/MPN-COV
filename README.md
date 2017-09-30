@@ -29,10 +29,10 @@ We proposed the second-order pooling to replace the common first-order, max/aver
 1. amounts to robust covariance estimation given a small number of large-dimensional features(a.k.a. small sample/large dimension), as commonly seen in the last convolutional layers in state-of-the-art ConvNets;
 2. appropriately exploits Riemannian geometry which allows zero eigenvalues, overcoming the downside of the well-known Log-Euclidean metric in this scenario. 
 
-   ![MPN-COV-ConvNet](https://github.com/jiangtaoxie/demo/blob/master/img/MPN-COV-ConvNet.jpg)
+   ![MPN-COV-ConvNet](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/doc/MPN-COV-ConvNet.jpg)
    - Figure 1: Illustration of MPN-COV ConvNet architecture. We add, after the last convolutional layer, a 1x1 convolution of d channels(d=256) for alleviating the problem of large dimension in covariance estimation. The MPN-COV layer is nonlinear and its the back-propagation formulas are derived in terms of Matrix Backpropagation methodology formulated in [[1]](#1-c-ionescu-o-vantzos-and-c-sminchisescu-matrix-backpropagation-for-deep-networks-with-structured-layers-in-iccv-2015).
 
-   ![result](https://github.com/jiangtaoxie/demo/blob/master/img/results.jpg)
+   ![result](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/doc/results.jpg)
    - Figure 2: Error(%,10-crop) comparison of MPN-COV ConvNets with the counterparts. We can see our method can improve the performance of top-1 1.6% ~ 6.8%,and top-5 1.0% ~ 4.0%.
 
 You can visit our [project page](http://www.peihuali.org/MPN-COV) for more details.
