@@ -40,7 +40,7 @@ You can visit our [project page](http://www.peihuali.org/MPN-COV) for more detai
  
 ### Classification results(top-1/top-5 error rates, %) on ImageNet 2012 validation set
 
- Network            |224x224<br />1-crop|224x224<br />10-crop|GoogleDriver|BaiduCloud
+ Network            |224x224<br />1-crop|224x224<br />10-crop|GoogleDrive|BaiduCloud
  ---|:---:|:---:|:---:|:---:
  MPN-COV-ResNet-50 |22.27/6.35         |21.16/5.58     |[195.9MB](https://drive.google.com/open?id=0B-bKYQs6Xic1TnZ5ZS1JRlVVZGM)|[195.9MB](https://pan.baidu.com/s/1c2fG1S8)
  MPN-COV-ResNet-101 |21.17/5.70        |19.71/5.01     |[283.8MB](https://drive.google.com/open?id=0B-bKYQs6Xic1bzVDN3EyaVZ4eGs)|[283.8MB](https://pan.baidu.com/s/1hsgonTq)
