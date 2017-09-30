@@ -4,7 +4,17 @@ This demo contains the code that can evaluate a model for inference with either 
 
 ### Usage
 
+#### Tutorial
+
+1. Put the models you download to `matconvnet_root_dir/pretrained`.
+
+2. Modify the `model_type` and `opts.method` in `evaluate.m` to get the results.
+
+3. run `evaluate.m`.
+
 #### Function description
+
+
 
 1. `evaluate.m`: main script.
 
@@ -23,12 +33,6 @@ This demo contains the code that can evaluate a model for inference with either 
 2. `predict_dagnn.m`: Make inference for an input image under DagNN framework.
 
 3. `predict_simplenn.m`: Make inference for an input image under SimpleNN framework.
-
-#### Reproduce our Results
-
-1. Put the models you download to `matconvnet_root_dir/pretrained`
-
-2. Modify the `model_type` and `opts.method` in `evaluate.m` to get the results
 
 ### Change log
 

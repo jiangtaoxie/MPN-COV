@@ -17,6 +17,18 @@ Improved B-CNN(VGG-D)[[2]](#2-t-y-lin-and-s-majiimproved-bilinear-pooling-with-c
 
 ### Usage
 
+#### Tutorial
+
+1. Download the dataset: [Birds](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html), [Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html) and [Aircrafts](http://www.robots.ox.ac.uk/~vgg/data/oid/).
+
+2. Put the datasets you downloaded into `matconvnet_root_dir/data/`.
+
+3. Put the models you downloaded into `matconvnet_root_dir/pretrained`. (Currently only supports 'MPN-COV-ResNet-50' and 'MPN-COV-ResNet-101')
+
+4. Modify the `opts.modelType` and `dataset_name` in `MPN_COV_main_ft.m` to your needs.
+
+4. run `MPN_COV_main_ft.m`.
+
 #### Function descriptions
 
 1. `MPN_COV_main_ft.m`: The main function of this finetuning demo.

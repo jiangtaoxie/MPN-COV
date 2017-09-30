@@ -14,6 +14,16 @@ This demo contains the code which implements training our MPN-COV ConvNets from 
 
 ### Usage
 
+#### Tutorial
+
+1. Download the ImageNet 2012 [dataset](http://image-net.org/download.php).
+
+2. Put the dataset you downloaded into `matconvnet_root_dir/data/`.
+
+3. Modify the `opts.modelType` in `MPN_COV_main.m` to your needs.
+
+4. run `MPN_COV_main.m`.
+
 #### Function descriptions
 
 1. `MPN_COV_main.m`: The main function.
