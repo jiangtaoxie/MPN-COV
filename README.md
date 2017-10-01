@@ -178,8 +178,8 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
 
 ## Other Implementations
 
-0. [Caffe Implementations](link)
-0. [TensorFlow Implementions](link)
+0. [Caffe Implementations](link)(Coming soon)
+0. [TensorFlow Implementions](link)(Coming soon)
 
 ## References
 
