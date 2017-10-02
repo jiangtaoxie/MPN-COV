@@ -62,7 +62,7 @@ end
 if ~opts.batchNormalization
   lr = logspace(-2, -4, 60) ;
 else
-  lr = logspace(-1.2, -5, 20) ;
+  lr = logspace(-1.2, -5.2, 20) ;
 end
 
 
