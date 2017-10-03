@@ -308,7 +308,7 @@ struct blas<vl::VLDT_CPU, vl::VLDT_Double>
       ptrdiff_t L)
   {
       vl::ErrorCode error = VLE_Success;
-      mxArray *lhs[2],*x;
+      mxArray *lhs[3],*x;
       mxClassID classID = mxDOUBLE_CLASS ;
       mwSize dim[3];
       dim[0] = n;dim[1] = n;dim[2] = L;
