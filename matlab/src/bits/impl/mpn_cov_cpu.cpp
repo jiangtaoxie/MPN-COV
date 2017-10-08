@@ -170,7 +170,7 @@ namespace vl { namespace impl {
             T* P         = aux_V;
             T aux_I_value= -(T)1 / m / m;
             vl::impl::operations<vl::VLDT_CPU, T>::fill(II, m*m, aux_I_value);
-			vl::impl::operations<vl::VLDT_CPU, T>::fill(S_diag, n*n*L, T(0));
+	    vl::impl::operations<vl::VLDT_CPU, T>::fill(S_diag, n*n*L, T(0));
             for(d = 0;d < m;d++){
                 II[d*(m+1)] =  II[d*(m+1)] + (T)1 / m;    // init I
             }
