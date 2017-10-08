@@ -170,7 +170,7 @@ namespace vl { namespace impl {
             T* P         = aux_V;
             T aux_I_value= -(T)1 / m / m;
             vl::impl::operations<vl::VLDT_CPU, T>::fill(II, m*m, aux_I_value);
-            vl::impl::operations<vl::VLDT_CPU, T>::fill(S_diag, n*n*L, T(0));
+			vl::impl::operations<vl::VLDT_CPU, T>::fill(S_diag, n*n*L, T(0));
             for(d = 0;d < m;d++){
                 II[d*(m+1)] =  II[d*(m+1)] + (T)1 / m;    // init I
             }
@@ -246,7 +246,7 @@ namespace vl { namespace impl {
             ptrdiff_t aux_V_Offset,aux_D_Offset;
             ptrdiff_t derDataOffset;
             ptrdiff_t diagSOffset,diagSrootOffset,diagSderiOffset;
-            unsigned int workspaceSize = (unsigned int)(13*n*n + 2*n + 2*m*n);
+            unsigned int workspaceSize = (unsigned int)(11*n*n + 2*n + 2*m*n+m*m);
             T* workspace = (T*)context.getWorkspace(vl::VLDT_CPU , workspaceSize*sizeof(T));
             T* dLdC         = workspace;
             T* S         = dLdC + n*n; 
@@ -258,12 +258,11 @@ namespace vl { namespace impl {
             T* diag_S    = K + n*n;
             T* allOnes   = diag_S + n;
             T* II         = allOnes + n;
-            T* I_X       = II + n*n;
+            T* I_X       = II + m*m;
             T* Vt_dLdV   = I_X + m*n;
             T* D         = Vt_dLdV + n*n;
             T* V_D       = D + n*n;
             T* V_D_Vt    = V_D + n*n;
-            T* dzdx      = V_D_Vt + n*n;
             T aux_I_value= -(T)1 / m / m;
             vl::impl::operations<vl::VLDT_CPU, T>::fill(II, m*m, aux_I_value);
             vl::impl::operations<vl::VLDT_CPU, T>::fill(S, n*n , (T)0);
@@ -360,9 +359,8 @@ namespace vl { namespace impl {
                                                                      m,n,n,
                                                                      T(2),I_X,m,
                                                                      V_D_Vt,n,
-                                                                     T(0),dzdx,m);
+                                                                     T(0),derData + derDataOffset,m);
                 if(error != vl::VLE_Success) {goto done ;}
-                vl::impl::operations<vl::VLDT_CPU, T>::copy(derData + derDataOffset,dzdx, m*n);
                                                                      
             }
         done:
