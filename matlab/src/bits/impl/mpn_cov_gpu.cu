@@ -66,8 +66,8 @@ template<typename T> __global__ void processEig_kernel(T* diagS,
 {
     CUDA_KERNEL_LOOP(i,Dmin){
         diagS[i] = dev_s[i];
-        diagSroot[i] = std::pow(dev_s[i] + epsilon,alpha);
-        diagSderi[i] = alpha * std::pow(dev_s[i] + epsilon,alpha - 1);
+        diagSroot[i] = pow(dev_s[i] + epsilon,alpha);
+        diagSderi[i] = alpha * pow(dev_s[i] + epsilon,alpha - 1);
     }
 }
 template<typename T> inline void

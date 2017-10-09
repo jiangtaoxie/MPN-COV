@@ -34,8 +34,8 @@ processEigResults_cpu(T *diagS,
     int Dmin = (int)(*aux_D);
     for(i = 0; i < Dmin; i ++){
         diagS[i] = host_s[i];
-        diagSroot[i] = std::pow(host_s[i] + epsilon, alpha);
-        diagSderi[i] = alpha * std::pow(host_s[i] + epsilon,alpha - 1);
+        diagSroot[i] = pow(host_s[i] + epsilon, alpha);
+        diagSderi[i] = alpha * pow(host_s[i] + epsilon,alpha - 1);
         S_diag[i*(n+1)] = diagSroot[i];
     }
 }
