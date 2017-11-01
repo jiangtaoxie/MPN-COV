@@ -164,20 +164,8 @@ opts.defCudaArch      = [...
   '-gencode=arch=compute_20,code=\"sm_20,compute_20\" '...
   '-gencode=arch=compute_30,code=\"sm_30,compute_30\"'];
 opts.cudnnRoot        = 'local/cudnn' ;
-% opts.mklRoot          = 'C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.4.210\windows\mkl';
-% opts.mkl = false;
 opts = vl_argparse(opts, varargin);
-% --------------------------------------------------------------------
-%                                                  Set mkl environment
-% --------------------------------------------------------------------
-% setenv('INCLUDE','');
-% setenv('LIBPATH','');
-% opts.mkl_include = {fullfile(opts.mklRoot,'include')};
-% opts.mkl_lib     = {fullfile(opts.mklRoot,'lib','intel64_win')};
-% include_path     = [getenv('INCLUDE')';opts.mkl_include{1}'];
-% setenv('INCLUDE',include_path);
-% lib_path         = [getenv('LIBPATH')';opts.mkl_lib{1}'];
-% setenv('LIBPATH',lib_path);
+
 % --------------------------------------------------------------------
 %                                                     Files to compile
 % --------------------------------------------------------------------
@@ -387,10 +375,7 @@ if opts.enableGpu
   end
 end
 
-% if opts.mkl
-%     flags.link = horzcat(flags.link, {['-L"' opts.mkl_lib{1} '"'], '-lmkl_lapack95_lp64','-lmkl_lapack95_ilp64',...
-%                                                                      '-lmkl_core','-lmkl_rt'   });
-% end
+
 
 switch arch
   case {'maci64'}
