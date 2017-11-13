@@ -116,9 +116,6 @@ for epoch=start+1:opts.numEpochs
   % This is important for reproducibility, including when training
   % is restarted from a checkpoint.
   
-  if (epoch - (start+1)) == 1  % lph 2016.10.18 22:55
-      quit force;
-  end
   
   rng(epoch + opts.randomSeed) ;
   prepareGPUs(opts, epoch == start+1) ;  % lph
