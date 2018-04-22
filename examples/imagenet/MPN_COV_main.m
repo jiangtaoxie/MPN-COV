@@ -12,7 +12,7 @@ opts.dataDir = fullfile(vl_rootnn, 'data', dataset_name) ;
 opts.modelType =  'alexnet';          %  'alexnet' 'vgg-m' 'vgg-vd-16'   'resnet-50'  'resnet-101'
            
 
-opts.dim = 64;                                  
+opts.dim = 4096;  % dimension of FC layers (only for opts.modelType = 'alexnet','vgg-m' or 'vgg-vd-16')                                
 opts.regu_method = 'power';       
 opts.epsilon = 0;                         
 opts.alpha = 0.5; 
