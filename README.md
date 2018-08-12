@@ -1,6 +1,6 @@
 # Is Second-order Information Helpful for Large-scale Visual Recognition?
 
-Created by [Jiangtao Xie](http://jiangtaoxie.github.io)and [Peihua Li](http://www.peihuali.org)
+Created by [Jiangtao Xie](http://jiangtaoxie.github.io) and [Peihua Li](http://www.peihuali.org)
 
 ## Contents
 0. [Introduction](#introduction)
