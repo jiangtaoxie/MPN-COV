@@ -23,13 +23,14 @@ This repository contains the source code and models trained on ImageNet 2012 dat
         journal= {International Conference on Computer Vision (ICCV)},
         year   = {2017}
     }
- 
-We proposed the second-order pooling to replace the common first-order, max/average pooling after the last conv. layer. The proposed networks, called MPN-COV ConvNets, achieved consistent, nontrivial improvements over their counterparts. The key to our method is **Matrix Power Normalization of COVariance**, which 
+
+We proposed the second-order pooling to replace the common first-order, max/average pooling after the last conv. layer. The proposed networks, called MPN-COV ConvNets, achieved consistent, nontrivial improvements over their counterparts. The key to our method is **Matrix Power Normalization of COVariance**, which
 
 1. amounts to robust covariance estimation given a small number of large-dimensional features(a.k.a. small sample/large dimension), as commonly seen in the last convolutional layers in state-of-the-art ConvNets;
-2. appropriately exploits Riemannian geometry which allows zero eigenvalues, overcoming the downside of the well-known Log-Euclidean metric in this scenario. 
-
-   ![MPN-COV-ConvNet](http://peihuali.org/pictures/MPN-COV.jpg)
+2. appropriately exploits Riemannian geometry which allows zero eigenvalues, overcoming the downside of the well-known Log-Euclidean metric in this scenario.
+<div>
+   <center><img src="doc/figures/MPN-COV.jpg" width="80%"></center>
+    </div>
    - Figure 1: Illustration of MPN-COV ConvNet architecture. We add, after the last convolutional layer, a 1x1 convolution of d channels(d=256) for alleviating the problem of large dimension in covariance estimation. The MPN-COV layer is nonlinear and its the back-propagation formulas are derived in terms of Matrix Backpropagation methodology formulated in [[1]](#1-c-ionescu-o-vantzos-and-c-sminchisescu-matrix-backpropagation-for-deep-networks-with-structured-layers-in-iccv-2015).
 
    ![result](doc/figures/results.jpg)
@@ -37,7 +38,7 @@ We proposed the second-order pooling to replace the common first-order, max/aver
 
 You can visit our [project page](http://www.peihuali.org/MPN-COV) for more details.
 ## Classification results
- 
+
 ### Classification results(top-1/top-5 error rates, %) on ImageNet 2012 validation set
 
  Network            |224x224<br />1-crop|224x224<br />10-crop|GoogleDrive|BaiduCloud
@@ -55,7 +56,7 @@ You can visit our [project page](http://www.peihuali.org/MPN-COV) for more detai
 
 ### Fine-grained classification results(top-1 accuracy rates, %)
 
-Network     |[Birds](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) |[Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html) |[Aircrafts](http://www.robots.ox.ac.uk/~vgg/data/oid/) 
+Network     |[Birds](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) |[Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html) |[Aircrafts](http://www.robots.ox.ac.uk/~vgg/data/oid/)
 ---|:---:|:---:|:---:
 MPN-COV-ResNet-50        |**87.6** |**92.9** |**90.5**
 B-CNN(VGG-M+VGG-D)[[2]](#2-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017)    |84.1 |91.3 |86.6
@@ -148,7 +149,7 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
                               'alpha', 0.5,...
                               'epsilon', 0);
 ```
-                            
+
 2. Under DagNN Framework
 
 ```matlab
@@ -166,7 +167,7 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
    In our [demo](https://github.com/jiangtaoxie/demo/tree/master/imagenet) code, we implement MPN-COV AlexNet, VGG-M and VGG-VD under SimpleNN framework, and MPN-COV ResNet under DagNN framework.
 
 ###  Arguments descriptions
-    
+
 1. **`'method'`**: It is reserved for future use.
 2. **`'regu_method'`**: We introduced three normalization methods in the paper, namely, `MPN-COV`,`MPN-COV+matrix-l2`,`MPN-COV+matrix-Fro`. As the latter two normalizations produced unsatisfactory performance, we only support MPN-COV, designated by `'power'`.
 3. **`'alpha'`**: It denotes the exponent of matrix power function(equivalently, the power of eigenvalues, see the paper), whose values should be positive. The default value is 0.5 producing the best performance.
