@@ -37,7 +37,7 @@ We proposed the second-order pooling to replace the common first-order, max/aver
    ![result](doc/figures/results.jpg)
    - Figure 2: Error(%,10-crop) comparison of MPN-COV ConvNets with the counterparts. We can see our method can improve the performance of top-1 1.6% ~ 6.8%,and top-5 1.0% ~ 4.0%.
 
-You can visit our [project page](http://www.peihuali.org/MPN-COV) for more details.
+You can visit our [project page](http://peihuali.org/iSQRT-COV/index.html) for more details.
 ## Classification results
 
 ### Classification results(top-1/top-5 error rates, %) on ImageNet 2012 validation set
