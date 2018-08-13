@@ -24,20 +24,13 @@ This repository contains the source code and models trained on ImageNet 2012 dat
         year   = {2017}
     }
 
-<<<<<<< HEAD
 We proposed the second-order pooling to replace the common first-order, max/average pooling after the last conv. layer. The proposed networks, called MPN-COV ConvNets, achieved consistent, nontrivial improvements over their counterparts. The key to our method is **Matrix Power Normalization of COVariance**, which
 
 1. amounts to robust covariance estimation given a small number of large-dimensional features(a.k.a. small sample/large dimension), as commonly seen in the last convolutional layers in state-of-the-art ConvNets;
 2. appropriately exploits Riemannian geometry which allows zero eigenvalues, overcoming the downside of the well-known Log-Euclidean metric in this scenario.
 <div>
    <center><img src="doc/figures/MPN-COV.jpg" width="80%"></center>
-=======
-1. amounts to robust covariance estimation given a small number of large-dimensional features(a.k.a. small sample/large dimension), as commonly seen in the last convolutional layers in state-of-the-art ConvNets;
-2. appropriately exploits Riemannian geometry which allows zero eigenvalues, overcoming the downside of the well-known Log-Euclidean metric in this scenario. 
-<div>
-   <center><img src="http://peihuali.org/pictures/MPN-COV.jpg" width="80%" style="display: block;margin-left=auto;margin-right=auto"></center>
->>>>>>> 6d168d6644eba6a18bf9f0621ca27d3cd87ae825
-    </div>
+</div>
    - Figure 1: Illustration of MPN-COV ConvNet architecture. We add, after the last convolutional layer, a 1x1 convolution of d channels(d=256) for alleviating the problem of large dimension in covariance estimation. The MPN-COV layer is nonlinear and its the back-propagation formulas are derived in terms of Matrix Backpropagation methodology formulated in [[1]](#1-c-ionescu-o-vantzos-and-c-sminchisescu-matrix-backpropagation-for-deep-networks-with-structured-layers-in-iccv-2015).
 
    ![result](doc/figures/results.jpg)
@@ -61,16 +54,6 @@ You can visit our [project page](http://www.peihuali.org/MPN-COV) for more detai
   - The two models, i.e., MPN-COV-ResNet-50 and MPN-COV-AlexNet, we released here are trained with the same settings,  slightly better than the models we reported in the ICCV paper.
   - The results either 1-crop or 10-crop  are evaluated using our [code](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/evaluate), Note that the main difference from the code provided by MatConvNet is that we RESIZE an image using Matlab [imresize function](http://cn.mathworks.com/help/images/ref/imresize.html); the performance will decrease slightly if the resize function of MatConvNet is used.
 
-### Fine-grained classification results(top-1 accuracy rates, %)
-
-Network     |[Birds](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html) |[Cars](http://ai.stanford.edu/~jkrause/cars/car_dataset.html) |[Aircrafts](http://www.robots.ox.ac.uk/~vgg/data/oid/)
----|:---:|:---:|:---:
-MPN-COV-ResNet-50        |**87.6** |**92.9** |**90.5**
-B-CNN(VGG-M+VGG-D)[[2]](#2-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017)    |84.1 |91.3 |86.6
-Improved B-CNN(VGG-D)[[3]](#3-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) |85.8 |92.0 |88.5
-
-  - The results are obtained by finetuning the MPN-COV ConvNets pretrained on ImageNet on the target fine-grained benchmarks; neither bounding boxes nor part information are used anywhere. The code to reproduce the results is released [here](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/fine_tune).
-  - We compare our results with closely related method, i.e., Bilinear CNN (B-CNN)[[2]](#2-t-y-lin-a-roychowdhury-and-s-maji-bilinear-cnn-models-for-fine-grained-visual-recognition-ieee-tpami-2017) and the improved B-CNN[[3]](#3-t-y-lin-and-s-majiimproved-bilinear-pooling-with-cnns-in-bmvc-2017) .
 
 ## Implementation details
 
@@ -193,9 +176,6 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
 
 ##### [1] C. Ionescu, O. Vantzos, and C. Sminchisescu. Matrix backpropagation for deep networks with structured layers. In ICCV, 2015.
 
-##### [2] T.-Y. Lin, A. RoyChowdhury, and S. Maji. Bilinear CNN models for fine-grained visual recognition. IEEE TPAMI, 2017.
-
-##### [3] T.-Y. Lin and S. Maji.Improved Bilinear Pooling with CNNs. In BMVC, 2017.
 
 ## Contact
 
