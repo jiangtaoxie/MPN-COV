@@ -2,7 +2,7 @@
 
 Created by [Jiangtao Xie](http://jiangtaoxie.github.io) and [Peihua Li](http://www.peihuali.org)
 <div>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="doc/figures/MPN-COV.jpg" width="90%"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img src="doc/figures/MPN-COV.jpg" width="80%"/>
 </div>
 
 ## Contents
