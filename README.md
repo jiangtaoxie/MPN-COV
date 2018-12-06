@@ -105,7 +105,7 @@ We developed our programs based on [MatConvNet](http://www.vlfeat.org/matconvnet
 1. We package our programs and [demos](https://github.com/jiangtaoxie/MPN-COV-ConvNet/tree/master/examples/imagenet) in MatConvNet toolkit,you can download this [PACKAGE](https://github.com/jiangtaoxie/MPN-COV-ConvNet/archive/master.zip) directly, or in your Terminal type:
 
 ```
-   >> git clone https://github.com/jiangtaoxie/MPN-COV-ConvNet
+   >> git clone https://github.com/jiangtaoxie/MPN-COV
 
 ```
 
