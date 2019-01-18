@@ -84,7 +84,7 @@ net.meta.classes.name = opts.classNames ;
 net.meta.classes.description = opts.classDescriptions ;
 
 net.meta.augmentation.keepAspect = true;
-net.meta.augmentation.jitterLocation = true ;
+net.meta.augmentation.jitterLocation = false ;
 net.meta.augmentation.jitterFlip = true ;
 net.meta.augmentation.jitterBrightness = double(0.1 * opts.colorDeviation) ;
 net.meta.augmentation.jitterAspect = [3/4, 4/3] ;
